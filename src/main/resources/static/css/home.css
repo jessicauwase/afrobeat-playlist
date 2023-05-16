@@ -1,0 +1,147 @@
+:root {
+    --white: #cccccc;
+    --background: #1b262c;
+    --second: rgb(34, 56, 73);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--background);
+}
+
+.music-container {
+    width: 95%;
+    height: 12em;
+    background-color: var(--second);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.music-container .info {
+    color: var(--white);
+    float: left;
+}
+
+.navigation-container {
+    overflow: hidden;
+    background-color: var(--second);
+    top: 0;
+    width: 100%;
+    position: sticky;
+}
+
+.navigation-container a {
+    float: left;
+    color: var(--white);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.text-message {
+    text-align: center;
+    color: white;
+}
+
+.music-container .image {
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.navigation-container a#active {
+    background-color: black;
+    color: coral;
+}
+
+.navigation-container a:hover {
+    background-color: var(--second);
+    color: var(--white);
+}
+
+.pagination a {
+    color: var(--white);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a.active {
+    background-color: var(--second);
+    color: var(--white);
+}
+
+.center {
+    text-align: center;
+}
+
+#audioPLayer {
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.artist {
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.mt-3 {
+    margin-top: 1em;
+}
+
+.ml-3 {
+    margin-left: 1em;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.pt-3 {
+    padding-top: 1em;
+}
+
+.p-3 {
+    padding: 1em;
+}
+
+.control-button button {
+    padding: 7px 20px;
+    border-radius: 4px;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #4e4e4e;
+    font-size: 12px;
+}

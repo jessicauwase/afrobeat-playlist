@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/upload.css">
+  <title>Document</title>
+</head>
+<body>
+<form id="container" method="post" modelAttribute="song" enctype="multipart/form-data">
+  <input type="text" name="title" placeholder="Title" th:value="${song.title}" />
+  <input type="text" name="artistName" placeholder="Artist Name" th:value="${song.artistName}" />
+  <label for="audio">Upload Audio</label>
+  <input type="file" name="audio" />
+  <label for="image">Upload Image</label>
+  <input type="file" name="image"/>
+  <input id="submit" type="submit" value="Submit" />
+</form>
+</body>
+</html>

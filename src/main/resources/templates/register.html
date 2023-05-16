@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>You won't regret it</title>
+</head>
+<body>
+    <div id="container">
+        <form th:action="@{/user}" th:object="${user}" method="post">
+			<h2 class="text-white">Register</h2>
+
+            <input type="text" th:field="*{firstName}" placeholder="First Name"/>
+
+            <ul th:if="${#fields.hasErrors('username')}">
+                <li th:each="err : ${#fields.errors('username')}" th:text="'Username ' + ${err}"></li>
+            </ul> 
+            <input type="text" th:field="*{username}" placeholder="Username"/>
+
+            <ul th:if="${#fields.hasErrors('email')}">
+                <li th:each="err : ${#fields.errors('email')}" th:text="'Email ' + ${err}"></li>
+            </ul>
+            <input type= "email" th:field="*{email}" placeholder="Email"/>
+            
+            <ul th:if="${#fields.hasErrors('password')}">
+                <li th:each="err : ${#fields.errors('password')}" th:text="'Password ' + ${err}"></li>
+            </ul>
+            <input type="password" th:field="*{password}" placeholder="Password"/>
+
+            <input type="password" th:field="*{matchingPassword}" placeholder="Rewite Password"/>
+
+            <input id="submit" type="submit" value="Create Account">
+        </form>
+
+        <a th:href="@{/login}">Already have an account?</a>
+    </div>
+</body>
+</html>

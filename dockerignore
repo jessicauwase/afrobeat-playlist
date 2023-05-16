@@ -1,0 +1,9 @@
+node_modules
+target
+.idea
+*.iml
+fly.toml
+Dockerfile
+.dockerignore
+node_modules
+.git
